@@ -9,6 +9,6 @@ namespace API.Data
         {
         }
 
-        public DbSet<Todo> Tasks { get; set; }
+        public DbSet<Todo> Todos { get; set; }
     }
 }

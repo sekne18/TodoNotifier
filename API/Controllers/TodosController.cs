@@ -10,10 +10,10 @@ namespace API.Data
 
     [ApiController]
     [Route("api/[controller]")]
-    public class TaskController : ControllerBase
+    public class TodosController : ControllerBase
     {
         private readonly DataContext _context;
-        public TaskController(DataContext context)
+        public TodosController(DataContext context)
         {
             _context = context;
         }
@@ -21,14 +21,14 @@ namespace API.Data
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Todo>>> GetTasks()
         {
-            return await _context.Tasks.ToListAsync();
+            return await _context.Todos.ToListAsync();
         }
 
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Todo>> GetTasks(int  id)
         {
-            return await _context.Tasks.FindAsync(id);
+            return await _context.Todos.FindAsync(id);
         }
 
         
