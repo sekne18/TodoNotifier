@@ -8,20 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   title = 'Todo Notifier';
-  todos: any;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.getTodos();
   } 
-
-  getTodos() {
-    this.http.get('https://localhost:5001/api/todos').subscribe(response =>  {
-      this.todos = response;
-    }, error => {
-      console.log(error);
-    })
-  }
+  
 
 }

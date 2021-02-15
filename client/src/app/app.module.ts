@@ -11,6 +11,9 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { TodoComponent } from './todo/todo.component';
 import { NotesComponent } from './notes/notes.component';
 import { HomeComponent } from './home/home.component';
+import { NotesListComponent } from './notes/notes-list/notes-list.component'; 
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
   dayGridPlugin,
@@ -24,13 +27,15 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
     CalendarComponent,
     TodoComponent,
     NotesComponent,
-    HomeComponent
+    HomeComponent,
+    NotesListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FullCalendarModule 
+    FullCalendarModule,
+    MDBBootstrapModule
   ],
   providers: [],
   bootstrap: [AppComponent]

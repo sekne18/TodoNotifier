@@ -1,1 +1,6 @@
-<p>notes works!</p>
+<div class="app">
+    <app-notes-list *ngFor="let note of notes" (dismiss)="deleteNote($event)" (focusout)="saveNote($event)" id="{{note.id}}">{{note.content}}</app-notes-list>
+</div>
+<div class="button">
+    <button style="bottom: 0px; position: inherit;" mdbBtn type="button" color="default" block="true" mdbWavesEffect (click)="addNote()">Add note</button>
+</div>
